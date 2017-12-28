@@ -1,0 +1,38 @@
+/*GENERAR HTML DENTRO DE UN HTML*/
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+      #container{
+        font-family:monospace;
+        font-weight:bold;
+        color:red;
+      }
+       html{
+        font-family:monospace;
+      }
+    </style>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+</head>
+	<body>
+	    <h1>HTML DE PRUEBAS</h1>
+	    <h2 id="container"></h2>
+	    <p>Experimentos de modificación web</p>
+	    <p id="demo"></p>
+	    <script>
+			var enRojo = "Warning: no debe utilizarse de referencia!";
+			$("#container").text(enRojo);
+			var ei = "<h2>";var text = "hola";var ef = "</h2>";
+			var inner = ei+text+ef;
+			var html = "<h1>Estás atrapado en esta pantalla</h1>"
+			+"<p>Eso te pasa por ir apretando botoncitos</p>"
+			document.getElementById("demo").innerHTML = inner;
+			document.write(ei+"text"+ef);
+	    </script>
+
+	    <button type="button" onclick="document.write(html)">Atrapa</button>
+	</body>
+</html>
